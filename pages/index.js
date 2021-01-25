@@ -4,6 +4,7 @@ import Widget from '../src/components/Widget'
 import Footer from '../src/components/Footer'
 import GitHubCorner from '../src/components/GitHubCorner'
 import QuizBackground from '../src/components/QuizBackground'
+import QuizLogo from '../src/components/QuizLogo'
 
 const QuizzContainer = styled.div`
   width: 100%;
@@ -20,25 +21,26 @@ export default function Home() {
   return (
     <QuizBackground backgroundImage={db.bg}>
       <QuizzContainer>
+        <QuizLogo></QuizLogo>
         <Widget>
           <Widget.Header>
             <h1>
-              The Legend of Zelda
-          </h1>
+              Comidas típicas
+            </h1>
           </Widget.Header>
           <Widget.Content>
             <p>
-              Toffee I love pudding marzipan. I love croissant jujubes topping tart bear claw carrot cake tart. I love oat cake croissant cupcake chocolate cake tootsie roll bear claw icing tootsie roll.
+              A programação desafiando seus conhecimentos em comidas típicas do Brasil. 
           </p>
           </Widget.Content>
         </Widget>
         <Widget>
           <Widget.Content>
             <h1>
-              The Legend of Zelda
+              Outros desafios
             </h1>
             <p>
-              Toffee I love pudding marzipan. I love croissant jujubes topping tart bear claw carrot cake tart.
+              Em breve ...
             </p>
           </Widget.Content>
         </Widget>
