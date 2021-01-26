@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
 const Widget = styled.div`
+font-family: 'Lato', sans-serif;
 margin-top: 24px;
 margin-bottom: 24px;
 border: 1px solid ${({ theme }) => theme.colors.primary};
@@ -13,7 +14,7 @@ h1, h2, h3 {
   font-weight: 400;
   line-height: 1;
 }
-`
+`;
 Widget.Content = styled.div`
 padding: 24px 32px 32px 32px;
 & > *:first-child{
@@ -26,7 +27,7 @@ ul {
   list-style: none;
   padding: 0;
 }
-`
+`;
 
 Widget.Header = styled.header`
 display: flex;
@@ -38,5 +39,5 @@ background-color: ${({ theme }) => theme.colors.primary};
 * {
   margin: 0;
 }
-`
+`;
 export default Widget;

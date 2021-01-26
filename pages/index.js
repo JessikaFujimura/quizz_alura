@@ -1,10 +1,12 @@
-import styled from 'styled-components'
-import db from '../db.json'
-import Widget from '../src/components/Widget'
-import Footer from '../src/components/Footer'
-import GitHubCorner from '../src/components/GitHubCorner'
-import QuizBackground from '../src/components/QuizBackground'
-import QuizLogo from '../src/components/QuizLogo'
+import { useState } from 'react';
+import styled from 'styled-components';
+import { useRouter } from 'next/router';
+import db from '../db.json';
+import Widget from '../src/components/Widget';
+import Footer from '../src/components/Footer';
+import GitHubCorner from '../src/components/GitHubCorner';
+import QuizBackground from '../src/components/QuizBackground';
+import QuizLogo from '../src/components/QuizLogo';
 
 const QuizzContainer = styled.div`
   width: 100%;
@@ -15,13 +17,15 @@ const QuizzContainer = styled.div`
     margin: auto;
     padding: 15px;
   }
-`
+`;
 
 export default function Home() {
+  const router = useRouter();
+  const [name, setName] = React.useState('');
   return (
     <QuizBackground backgroundImage={db.bg}>
       <QuizzContainer>
-        <QuizLogo></QuizLogo>
+        <QuizLogo />
         <Widget>
           <Widget.Header>
             <h1>
@@ -30,15 +34,26 @@ export default function Home() {
           </Widget.Header>
           <Widget.Content>
             <p>
-              A programação desafiando seus conhecimentos em comidas típicas do Brasil. 
-          </p>
+              A programação desafiando seus conhecimentos em comidas típicas do Brasil.
+            </p>
+            <form onSubmit={(e) => {
+              router.push(`/quiz?name=${name}`);
+            }}
+            >
+              <input type="text" placeholder="Diz ai seu nome" onChange={(e) => setName(e.target.value)} />
+              <button type="submit" disabled={name.length === ''}>
+                Jogar { name }
+              </button>
+            </form>
           </Widget.Content>
         </Widget>
         <Widget>
-          <Widget.Content>
+          <Widget.Header>
             <h1>
               Outros desafios
             </h1>
+          </Widget.Header>
+          <Widget.Content>
             <p>
               Em breve ...
             </p>
@@ -48,5 +63,5 @@ export default function Home() {
       </QuizzContainer>
       <GitHubCorner projectUrl="https://github.com/JessikaFujimura" />
     </QuizBackground>
-  )
+  );
 }
