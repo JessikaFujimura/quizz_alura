@@ -1,18 +1,17 @@
 {
-    "bg": "https://sdngastronomia.files.wordpress.com/2014/02/gastronomia.jpg",
-    "title": "Quiz CSS da Alura",
-    "description": "Teste os seus conhecimentos sobre CSS e vamos ver quantos layouts você vai deixar de quebrar",
+    "bg": "https://www.dtidigital.com.br/wp-content/uploads/2019/03/Programa%C3%A7%C3%A3o-microsoft-inoveduc-destaque.jpg",
+    "title": "Quiz de programação da Alura",
+    "description": "Teste os seus conhecimentos sobre programação e vamos ver quantos bugs você vai gerar",
     "questions": [
       {
-        "image": "https://media.giphy.com/media/xUOxf3yDKCuwpOlT3i/giphy.gif",
-        "title": "Como fazer um seletor por id via CSS?",
+        "image": "https://media.giphy.com/media/h408T6Y5GfmXBKW62l/giphy.gif",
+        "title": "Qual tipo de dado é usado para textos?",
         "description": "Essa é pra aquecer",
-        "answer": 2,
+        "answer": 0,
         "alternatives": [
-          ".elemento",
-          "*elemento",
-          "#elemento",
-          "%elemento"
+          "caracter",
+          "numerico",
+          "array"
         ]
       },
       {
@@ -23,6 +22,17 @@
         "alternatives": [
            "background: linear-gradient(#e66465, #9198e5);",
            "background: gradient(#e66465, #9198e5);"
+        ]
+      },
+      {
+        "image": "https://media.giphy.com/media/3oKHWppFpiOEYbJX9u/giphy.gif",
+        "title": "Como se chama a sequencia de instruções dadas para executar uma tarefa em programação?",
+        "description": "Essa é facil",
+        "answer": 2,
+        "alternatives": [
+           "código",
+           "programaminha",
+           "algoritmo"
         ]
       }
     ],

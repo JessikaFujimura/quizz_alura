@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 import { useRouter } from 'next/router';
 import db from '../db.json';
@@ -7,11 +7,13 @@ import Footer from '../src/components/Footer';
 import GitHubCorner from '../src/components/GitHubCorner';
 import QuizBackground from '../src/components/QuizBackground';
 import QuizLogo from '../src/components/QuizLogo';
+import Input from '../src/components/Input';
+import Button from '../src/components/Button';
 
 const QuizzContainer = styled.div`
   width: 100%;
   max-width: 350px;
-  padding-top: 45px;
+  padding-top: 25px;
   margin: auto 10%;
   @media screen and (max-width: 500px){
     margin: auto;
@@ -29,21 +31,27 @@ export default function Home() {
         <Widget>
           <Widget.Header>
             <h1>
-              Comidas típicas
+              {db.title}
             </h1>
           </Widget.Header>
           <Widget.Content>
             <p>
-              A programação desafiando seus conhecimentos em comidas típicas do Brasil.
+              {db.description}
             </p>
             <form onSubmit={(e) => {
+              e.preventDefault();
               router.push(`/quiz?name=${name}`);
             }}
             >
-              <input type="text" placeholder="Diz ai seu nome" onChange={(e) => setName(e.target.value)} />
-              <button type="submit" disabled={name.length === ''}>
-                Jogar { name }
-              </button>
+              <Input
+                name="nomeDoUsuário"
+                type="text"
+                placeholder="Diz ai seu nome"
+                onChange={(e) => setName(e.target.value)}
+              />
+              <Button type="submit" disabled={name.length === ''}>
+                {`Jogar ${name}`}
+              </Button>
             </form>
           </Widget.Content>
         </Widget>
