@@ -58,18 +58,18 @@ export default function Home() {
         <Widget>
           <Widget.Header>
             <h1>
-              Outros desafios
+              Quizzes da galera
             </h1>
           </Widget.Header>
           <Widget.Content>
-            <p>
-              Em breve ...
-            </p>
+            {db.external.map((link) => (
+              <a style={{ display: 'block' }} href={link} target="_blank" rel="noreferrer">{link}</a>
+            ))}
           </Widget.Content>
         </Widget>
         <Footer />
       </QuizzContainer>
       <GitHubCorner projectUrl="https://github.com/JessikaFujimura" />
-    </QuizBackground>
+    </QuizBackground >
   );
 }

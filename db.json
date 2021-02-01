@@ -31,13 +31,59 @@
         "answer": 2,
         "alternatives": [
            "código",
-           "programaminha",
+           "programinha",
            "algoritmo"
+        ]
+      },
+      {
+        "image": "https://media.giphy.com/media/dxn6fRlTIShoeBr69N/giphy.gif",
+        "title": "Como o versionador de códigos mais utilizado na programação?",
+        "description": "Super easy",
+        "answer": 1,
+        "alternatives": [
+           "facebook",
+           "git",
+           "bitbucket"
+        ]
+      }, 
+      {
+        "image": "https://media.giphy.com/media/l2Sq7HoOsgAKpl8ju/giphy.gif",
+        "title": "Qual o tipo de política de acesso da estrutura de dados FILA?",
+        "description": "Vamos ver se você manja de ED",
+        "answer": 1,
+        "alternatives": [
+           "LIFO",
+           "FIFO",
+           "DIFO"
+        ]
+      },
+      {
+        "image": "https://media.giphy.com/media/fAnzw6YK33jMwzp5wp/giphy.gif",
+        "title": "Qual área da programação desenvolve a parte visual das páginas?",
+        "description": "Mamão com açúcar essa hein...",
+        "answer": 2,
+        "alternatives": [
+           "data-science",
+           "back-end",
+           "front-end"
+        ]
+      },
+      {
+        "image": "https://media.giphy.com/media/P4X0M9pR7C3ilMDZVS/giphy.gif",
+        "title": "Qual o nome da metodologia que é bastante famosa na área de tecnologia?",
+        "description": "Você vai precisar de post-it",
+        "answer": 2,
+        "alternatives": [
+           "Ágeis",
+           "Cascata",
+           "Espiral"
         ]
       }
     ],
     "external": [
-      ""
+      "https://pato-quiz-nextjs.theedouglasam.vercel.app/",
+      "https://harry-potter-quiz.brunogerbasi.vercel.app/",
+      "https://tem-cafe.vercel.app/"
     ],
     "theme": {
       "colors": {
