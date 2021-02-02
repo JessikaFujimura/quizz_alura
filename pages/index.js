@@ -62,14 +62,23 @@ export default function Home() {
             </h1>
           </Widget.Header>
           <Widget.Content>
-            {db.external.map((link) => (
-              <a style={{ display: 'block' }} href={link} target="_blank" rel="noreferrer">{link}</a>
-            ))}
+            <ul>
+              {db.external.map((link) => {
+                const [project, gitHubUser] = link.replace(/https:\/\//g, '')
+                  .replace('.vercel.app/', '')
+                  .split('.');
+                return (
+                  <li>
+                    <Widget.Topic href={`quiz/${project}___${gitHubUser}`} rel="noreferrer">{`${gitHubUser}/${project}`}</Widget.Topic>
+                  </li>
+                );
+              })}
+            </ul>
           </Widget.Content>
         </Widget>
         <Footer />
       </QuizzContainer>
       <GitHubCorner projectUrl="https://github.com/JessikaFujimura" />
-    </QuizBackground >
+    </QuizBackground>
   );
 }
